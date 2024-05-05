@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GESTORIVANTORRANO.InsertarController">
+    <top>
+        <Label text="Gestor empleados" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <TabPane prefHeight="365.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Nuevo Empleado">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Nombre" AnchorPane.bottomAnchor="309.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="10.0" />
+                                <TextField fx:id="txtFieldNombre" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                                <Label text="Puesto" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0" />
+                                <ComboBox fx:id="cmbBoxPuesto" prefWidth="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="80.0">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:id="scMng" fx:value="Scada Manager" />
+                                            <String fx:id="slMng" fx:value="Sales Manager" />
+                                            <String fx:id="prdOwn" fx:value="Product Owner" />
+                                            <String fx:id="prdMng" fx:value="Product Manager" />
+                                            <String fx:id="anlPrg" fx:value="Analyst Programmer" />
+                                            <String fx:id="jnrPrg" fx:value="Junior Programmer" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <Label text="Salario" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="120.0" />
+                                <TextField fx:id="txtFieldSalario" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="140.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="210.0">
+                           <children>
+                                      <Button fx:id="btnInsertar" mnemonicParsing="false" onAction="#insertar" text="Insertar" />
+                              <Button mnemonicParsing="false" onAction="#meterDatos" text="Cargar Datos">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Consultar">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="lstVwNombres" layoutX="7.0" onMouseClicked="#verDetalles" prefHeight="247.0" prefWidth="240.0" />
+                        <Button layoutX="101.0" layoutY="258.0" mnemonicParsing="false" onAction="#verTrabajadores" text="Refrescar" />
+                        <Label fx:id="lblTrabajador" layoutX="273.0" layoutY="7.0" prefHeight="201.0" prefWidth="199.0" />
+                        <HBox layoutX="273.0" layoutY="208.0" prefHeight="38.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#onEditar" text="Editar">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#onEliminar" text="Eliminar" textFill="#232727">
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

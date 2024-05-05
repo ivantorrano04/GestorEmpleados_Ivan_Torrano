@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GESTORIVANTORRANO.EdicionController">
+   <children>
+      <VBox layoutX="14.0" layoutY="31.0" prefHeight="202.0" prefWidth="406.0">
+         <children>
+            <HBox prefHeight="16.0" prefWidth="406.0">
+               <children>
+                  <Label text="Id" />
+                  <Label fx:id="lblIdTrabajador">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label text="NOMBRE">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtFldNombre" />
+            <Label text="PUESTO">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtFldPuesto" />
+            <Label text="SALARIO">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtFldSal" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="16.0" layoutY="209.0" prefHeight="191.0" prefWidth="406.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="177.60000000000002" AnchorPane.topAnchor="209.0">
+         <children>
+            <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#onModificar" text="Modificar">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding></Separator>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onCancelar" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
